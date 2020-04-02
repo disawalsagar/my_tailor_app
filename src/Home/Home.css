@@ -2,3 +2,9 @@
     height: 40vmin;
     pointer-events: none;
   }
+
+  .logo {
+    border: none !important;
+    height: 15em;
+    background-color: transparent;
+  }
