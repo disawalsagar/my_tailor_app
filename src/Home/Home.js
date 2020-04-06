@@ -7,20 +7,20 @@ class Home extends Component {
   render() {
 
     return (
-      <div class="row text-center">
-        <div class="col-12">
-          <img class="img-thumbnail logo"
-            src={men_shirt}
+      <div className="row text-center">
+        <div className="col-12">
+          <img className="img-thumbnail logo"
+            src={men_shirt} alt="logo"
           />
-          <div class="col-12">
+          <div className="col-12">
             <Button variant="secondary">Shirt</Button>
           </div>
         </div>
-        <div class="col-12">
-          <img class="img-thumbnail logo"
-            src={men_pant}
+        <div className="col-12">
+          <img className="img-thumbnail logo"
+            src={men_pant} alt="logo"
           />
-          <div class="col-12">
+          <div className="col-12">
             <Button variant="secondary">Pant</Button>
           </div>
         </div>
