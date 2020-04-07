@@ -7,7 +7,7 @@ import { PDFDownloadLink } from "@react-pdf/renderer";
 
 
 
-class shirt extends Component {
+class Shirt extends Component {
 
   constructor(props) {
     super(props);
@@ -111,4 +111,4 @@ class shirt extends Component {
   }
 }
 
-export default shirt;
+export default Shirt;

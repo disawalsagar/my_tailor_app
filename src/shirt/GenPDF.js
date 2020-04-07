@@ -4,10 +4,14 @@ import React from 'react';
 function GenPDF() {
 
    
+<<<<<<< HEAD
         return (
            <div>
                </div>
         )
+=======
+        
+>>>>>>> 190c7279e9b5247e82b13ddd579b4c2fe0743040
     
 }
 
