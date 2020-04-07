@@ -15,49 +15,40 @@ class Home extends Component {
     this.routeChange = this.routeChange.bind(this)
   }
   routeChange = (event) => {
-    let currentUrl = '\/'+event.currentTarget.value;
+    let currentUrl = '\/' + event.currentTarget.value;
     console.log("inside route change", currentUrl);
-    this.setState({ navigate: true, NavUrl: currentUrl }, () => {this.loadpage()});
+    this.setState({ navigate: true, NavUrl: currentUrl }, () => { this.loadpage() });
   }
 
   loadpage() {
     console.log(this.state)
-    if(this.state.navigate && this.state.NavUrl) {
+    if (this.state.navigate && this.state.NavUrl) {
       this.props.history.push(this.state.NavUrl);
     }
   }
 
   render() {
 
-    const referrer = this.state.url;
-    console.log(this.state);
-   /*  if (referrer) {
-      console.log(referrer);
-      return (<Router><Redirect to={referrer}/></Router>)
-    }
-    else { */
-      return (
-        <div class="row text-center">
-          <div class="col-12">
-            <img class="img-thumbnail logo"
-              src={men_shirt}
-            />
-            <div class="col-12">
-              <Button variant="secondary" value="shirt" onClick={this.routeChange}>Shirt</Button>
-            </div>
-          </div>
-          <div class="col-12">
-            <img class="img-thumbnail logo"
-              src={men_pant}
-            />
-            <div class="col-12">
-              <Button variant="secondary">Pant</Button>
-            </div>
+    return (
+      <div className="row text-center">
+        <div className="col-12">
+          <img className="img-thumbnail logo"
+            src={men_shirt} alt="logo"
+          />
+          <div className="col-12">
+            <Button variant="secondary" value="shirt" onClick={this.routeChange}>Shirt</Button>
           </div>
         </div>
-
-      )
-    /* } */
+        <div className="col-12">
+          <img className="img-thumbnail logo"
+            src={men_pant} alt="logo"
+          />
+          <div className="col-12">
+            <Button variant="secondary">Pant</Button>
+          </div>
+        </div>
+      </div>
+    )
   }
 }
 
