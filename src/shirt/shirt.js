@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './shirt.css';
 
-class shirt extends Component {
+class Shirt extends Component {
   // constructor(props){
     // super(props);
     // this.state = {};
@@ -23,4 +23,4 @@ class shirt extends Component {
   }
 }
 
-export default shirt;
+export default Shirt;
