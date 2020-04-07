@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './shirt.css';
 //import { Row, Col, Button, Form, Table } from 'react-bootstrap/';
 import GenPDF from './GenPDF';
-//import { PDFDownloadLink } from "@react-pdf/renderer";
+import { PDFDownloadLink } from "@react-pdf/renderer";
 //import { Page, Text, View, Document, StyleSheet } from '@react-pdf/renderer';
 
 
@@ -90,7 +90,21 @@ class shirt extends Component {
           </fieldset>
         </form>
       
-        { console.log("jhhjvhv")}
+        {<PDFDownloadLink
+        document={<GenPDF data={this.state.formControls} />}
+        fileName="movielist.pdf"
+        style={{
+          textDecoration: "none",
+          padding: "10px",
+          color: "#4a4a4a",
+          backgroundColor: "#f2f2f2",
+          border: "1px solid #4a4a4a"
+        }}
+      >
+        {({ blob, url, loading, error }) =>
+          loading ? "Loading document..." : "Download Pdf"
+        }
+      </PDFDownloadLink>}
 
       </div>
     );

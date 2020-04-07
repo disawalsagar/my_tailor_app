@@ -1,30 +1,13 @@
 import React from 'react';
 //import { Page, Document } from '@react-pdf/renderer';
 // Text, View,
-function GenPDF(props) {
+function GenPDF() {
 
-    
-    // Create styles
-    /*styles() {
-        StyleSheet.create({
-            page: {
-                flexDirection: 'row',
-                backgroundColor: '#E4E4E4'
-            },
-            section: {
-                margin: 10,
-                padding: 10,
-                flexGrow: 1
-            }
-        });
-    }*/
-
-    // Create Document Component
    
         return (
-            {p}
-           console.log("From GenPDF")
-        );
+           <div>
+               </div>
+        )
     
 }
 
