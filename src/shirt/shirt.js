@@ -21,7 +21,8 @@ class Shirt extends Component {
         six: 0,
         seven: 0,
         eight: 0
-      }
+      } ,
+      show: false
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -44,7 +45,7 @@ class Shirt extends Component {
   }
   handleSubmit(event) {
     event.preventDefault();
-    GenPDF(this.state.formControls)
+    this.setState({show: true})
   }
 
 
@@ -86,13 +87,14 @@ class Shirt extends Component {
               eight: <br />
               <input type="number" name="eight" value={this.state.formControls.eight} onChange={this.handleChange} />
             </label>  <br />
-            <button type="submit">Submit</button>
+            <button type="submit">Submit</button> <br /> <br />
           </fieldset>
         </form>
       
-        {<PDFDownloadLink
+        
+        {this.state.show && <PDFDownloadLink
         document={<GenPDF data={this.state.formControls} />}
-        fileName="movielist.pdf"
+        fileName="measurment.pdf"
         style={{
           textDecoration: "none",
           padding: "10px",
