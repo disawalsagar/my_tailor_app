@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import './Home.css';
 import { Button } from 'react-bootstrap';
-import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
 import men_shirt from './mens-shirt_78211.svg';
 import men_pant from './men-pant_78206.svg';
-import Shirt from '../shirt/shirt';
+
 class Home extends Component {
   constructor(props) {
     super(props);
