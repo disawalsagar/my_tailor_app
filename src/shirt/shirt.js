@@ -21,7 +21,7 @@ class Shirt extends Component {
         six: 0,
         seven: 0,
         eight: 0
-      } ,
+      },
       show: false
     };
     this.handleChange = this.handleChange.bind(this);
@@ -40,12 +40,12 @@ class Shirt extends Component {
       }
 
     });
-    
+
 
   }
   handleSubmit(event) {
     event.preventDefault();
-    this.setState({show: true})
+    this.setState({ show: true })
   }
 
 
@@ -53,60 +53,78 @@ class Shirt extends Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <fieldset>
-            <legend>Shirt:</legend>
-            <label>
-              one: <br />
-              <input type="number" name="one" value={this.state.formControls.one} onChange={this.handleChange} />
-            </label>
-            <label>
-              two: <br />
-              <input type="number" name="two" value={this.state.formControls.two} onChange={this.handleChange} />
-            </label>
-            <label>
-              three: <br />
-              <input type="number" name="three" value={this.state.formControls.three} onChange={this.handleChange} />
-            </label>
-            <label>
-              four: <br />
-              <input type="number" name="four" value={this.state.formControls.four} onChange={this.handleChange} />
-            </label>
-            <label>
-              five: <br />
-              <input type="number" name="five" value={this.state.formControls.five} onChange={this.handleChange} />
-            </label>
-            <label>
-              six: <br />
-              <input type="number" name="six" value={this.state.formControls.six} onChange={this.handleChange} />
-            </label>
-            <label>
-              seven: <br />
-              <input type="number" name="seven" value={this.state.formControls.seven} onChange={this.handleChange} />
-            </label>
-            <label>
-              eight: <br />
-              <input type="number" name="eight" value={this.state.formControls.eight} onChange={this.handleChange} />
-            </label>  <br />
-            <button type="submit">Submit</button> <br /> <br />
-          </fieldset>
+          <h6 className="text-primary">Shirt Measurmets:</h6>
+          <table>
+            <tbody>
+              <tr>
+                <td className="ui header">One:</td>
+                <td>
+                  <input type="number" name="one" value={this.state.formControls.one} onChange={this.handleChange} />
+                </td>
+              </tr>
+              <tr>
+                <td className="ui header">Two:</td>
+                <td>
+                  <input type="number" name="two" value={this.state.formControls.two} onChange={this.handleChange} />
+                </td>
+              </tr>
+              <tr>
+                <td className="ui header">Three:</td>
+                <td>
+                <input type="number" name="three" value={this.state.formControls.three} onChange={this.handleChange} />
+                </td>
+              </tr>
+              <tr>
+                <td className="ui header">Four:</td>
+                <td>
+                <input type="number" name="four" value={this.state.formControls.four} onChange={this.handleChange} />
+                </td>
+              </tr>
+              <tr>
+                <td className="ui header">Five:</td>
+                <td>
+                <input type="number" name="five" value={this.state.formControls.five} onChange={this.handleChange} />
+                </td>
+              </tr>
+              <tr>
+                <td className="ui header">Six:</td>
+                <td>
+                <input type="number" name="six" value={this.state.formControls.six} onChange={this.handleChange} />
+                </td>
+              </tr>
+              <tr>
+                <td className="ui header">Seven:</td>
+                <td>
+                <input type="number" name="seven" value={this.state.formControls.seven} onChange={this.handleChange} />
+                </td>
+              </tr>
+              <tr>
+                <td className="ui header">Eight:</td>
+                <td>
+                <input type="number" name="eight" value={this.state.formControls.eight} onChange={this.handleChange} />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <button type="submit">Submit</button> <br /> <br />
         </form>
-      
-        
+
+
         {this.state.show && <PDFDownloadLink
-        document={<GenPDF data={this.state.formControls} />}
-        fileName="measurment.pdf"
-        style={{
-          textDecoration: "none",
-          padding: "10px",
-          color: "#4a4a4a",
-          backgroundColor: "#f2f2f2",
-          border: "1px solid #4a4a4a"
-        }}
-      >
-        {({ blob, url, loading, error }) =>
-          loading ? "Loading document..." : "Download Pdf"
-        }
-      </PDFDownloadLink>}
+          document={<GenPDF data={this.state.formControls} />}
+          fileName="measurment.pdf"
+          style={{
+            textDecoration: "none",
+            padding: "10px",
+            color: "#4a4a4a",
+            backgroundColor: "#f2f2f2",
+            border: "1px solid #4a4a4a"
+          }}
+        >
+          {({ blob, url, loading, error }) =>
+            loading ? "Loading document..." : "Download Pdf"
+          }
+        </PDFDownloadLink>}
 
       </div>
     );
