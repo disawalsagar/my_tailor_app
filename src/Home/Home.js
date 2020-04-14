@@ -44,7 +44,7 @@ class Home extends Component {
             src={men_pant} alt="logo"
           />
           <div className="col-12">
-            <Button variant="secondary">Pant</Button>
+            <Button variant="secondary" value="pant" onClick={this.routeChange}>Pant</Button>
           </div>
         </div>
       </div>
